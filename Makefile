@@ -1,18 +1,19 @@
 # Makefile for nInvaders
 # Copyright (C) 2003 Sebastian Gutsfeld, Alexander Hollinger
 
+.POSIX:
 CC     = cc
 CFLAGS = -I. -g -O2
 LIBS   = -lncurses 
 
-PREFIX = /usr/local
-MANPREFIX = $(PREFIX)/man/man6
+PREFIX ?= /usr/local
+MANPREFIX ?= $(PREFIX)/man/man6
 
+TARG = nInvaders
 CFILES = globals.c view.c aliens.c ufo.c player.c highscore.c nInvaders.c
 HFILES = globals.h view.h aliens.h ufo.h player.h highscore.h nInvaders.h
 OFILES = globals.o view.o aliens.o ufo.o player.o highscore.o nInvaders.o
 MANFILES = nInvaders.6
-TARG = nInvaders
 
 all:		$(TARG)
 
@@ -37,3 +38,5 @@ install:
 
 uninstall:
 	rm -fv $(MANPREFIX)$(MANFILES) $(PREFIX)/bin/$(TARG)
+
+.PHONY: all clean distclean install uninstall

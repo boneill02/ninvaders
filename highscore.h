@@ -52,7 +52,7 @@ int       writeHighScore   (HighScore);
 void      addEntry         (char*, int, int);
 
 
-HighScore highscore; /* todo: not a global variable! */
+extern HighScore highscore; /* todo: not a global variable! */
 
 
 #endif

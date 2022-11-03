@@ -27,6 +27,7 @@
 #include <string.h>
 
 
+
 /**************************************************************************************************
  * 
  * private constants, variables, structures, declarations, macros
@@ -38,6 +39,7 @@
 #define HIGHSCORE_VERSION       "0.1"                      /* version number for highscore file */
 
 
+HighScore highscore;
 
 
 /**************************************************************************************************
